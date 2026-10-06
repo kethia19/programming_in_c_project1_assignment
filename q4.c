@@ -5,7 +5,6 @@ const int echoPin = 10;
 const int greenLED = 4;
 const int redLED = 3;
 const int buzzer = 6;
-
 const int threshold = 30;
 
 void setup() {
@@ -32,17 +31,14 @@ void loop() {
 
     digitalWrite(trigPin, LOW);
 
-    // Measure the returning pulse (30 ms timeout = nothing in range)
     duration = pulseIn(echoPin, HIGH, 30000);
 
-    // Calculate distance in centimeters
     distance = duration * 0.034 / 2;
 
     Serial.print("Distance: ");
     Serial.print(distance);
     Serial.println(" cm");
 
-    // Determine parking status (0 means no echo, so treat as empty)
     if (distance > 0 && distance <= threshold) {
         // Vehicle detected
         digitalWrite(redLED, HIGH);
