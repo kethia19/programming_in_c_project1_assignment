@@ -58,7 +58,7 @@ An Arduino simulation that uses an **HC-SR04 ultrasonic sensor** to detect wheth
 * Red LED + buzzer → Parking space occupied
 * Detection threshold → **30 cm**
 
-**File:** `q4.ino`
+**File:** `q4.c`
 
 The circuit was designed and tested using **Tinkercad**.
 
@@ -71,7 +71,7 @@ programming_in_c_project1_assignment/
 ├── q1.c
 ├── q2.c
 ├── q3.c
-└── q4.ino
+└── q4.c
 ```
 
 ## How to Run the C Programs
